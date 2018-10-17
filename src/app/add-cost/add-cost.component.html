@@ -1,0 +1,22 @@
+<div class="col-md-4">
+  <h2>Please enter the cost</h2>
+  <form #expenseForm="ngForm">
+    <div class="form-group">
+      <label for="exID">ID</label>
+      <input [(ngModel)]="expense.exID" name="exID" type="text" class="form-control" placeholder="please give it an unique ID"/>
+    </div>
+    <div class="form-group">
+      <label for="exItem">Item</label>
+      <input [(ngModel)]="expense.exItem" name="exItem" class="form-control" placeholder="where did money go" id="item" type="text">
+    </div>
+
+    <div class="form-group">
+      <label for="cost">Cost:</label>
+      <input [(ngModel)]="expense.cost" name="cost" class="form-control" placeholder="how much it cost" id="cost" required type="text">
+    </div>
+
+    <button class="btn btn-success" (click)="onClick(); expenseForm.reset()">Add</button>
+    <button class="btn btn-success" routerLink="/">Cancel</button>
+  </form>
+
+</div>

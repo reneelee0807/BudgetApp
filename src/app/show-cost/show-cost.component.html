@@ -1,0 +1,30 @@
+<h2>My Monthly Income is {{money}}</h2>
+<div id="expenseTableHeading">
+  <h2>My Expense</h2>
+  <button class="btn btn-success" routerLink="/add-cost" type="button">
+    <span class="btnFont">Add New Expense</span>
+  </button>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Item</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expense of expenses ">
+      <td>{{expense.exID}}</td>
+      <td>{{expense.exItem}}</td>
+      <td>{{expense.cost}}</td>
+      <td>
+        <button class="btn btn-info" (click)="editExpense(expense.exID)"> Edit</button>
+        <button class="btn btn-danger" (click)="deleteExpense(expense.exID)"> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>My Balance is {{calculate()}}</h3>
+

@@ -1,0 +1,11 @@
+#expenseTableHeading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-success {
+  margin: 1.2em;
+}
+.btn-info{
+  margin-right:1em;
+}
